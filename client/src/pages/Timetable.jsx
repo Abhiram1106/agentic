@@ -65,42 +65,64 @@ const Timetable = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 xl:grid-cols-5 gap-6">
-        {sortedSchedule.map((day) => (
-          <div key={day._id || day.dayOfWeek} className="card bg-white p-5 h-full flex flex-col shadow-sm border border-border">
-            <h3 className="text-xl font-bold text-text mb-4 pb-2 border-b border-gray-100 flex items-center">
-              <span className="w-2 h-6 bg-primary rounded mr-3"></span>
-              {day.dayOfWeek}
-            </h3>
-            
-            <div className="space-y-4 flex-1">
-              {day.periods.length === 0 ? (
-                <div className="text-center py-8 text-gray-400 text-sm font-medium">No classes</div>
-              ) : (
-                day.periods.map((period, idx) => (
-                  <div key={period._id || idx} className="bg-gray-50 rounded-xl p-4 transition-all hover:shadow-md hover:bg-white hover:border-primary/20 border border-transparent">
-                    <h4 className="font-bold text-text text-sm mb-2">{period.subject}</h4>
-                    
-                    <div className="space-y-2">
-                      <div className="flex items-center text-xs text-gray-600">
-                        <Clock size={14} className="mr-2 text-primary" />
-                        <span className="font-medium">{period.startTime} - {period.endTime}</span>
-                      </div>
-                      <div className="flex items-center text-xs text-gray-600">
-                        <MapPin size={14} className="mr-2 text-primary" />
-                        <span>Room {period.room}</span>
-                      </div>
-                      <div className="flex items-center text-xs text-gray-600">
-                        <User size={14} className="mr-2 text-primary" />
-                        <span>{period.teacher}</span>
-                      </div>
-                    </div>
-                  </div>
-                ))
-              )}
-            </div>
-          </div>
-        ))}
+      <div className="bg-white rounded-2xl shadow-sm border border-border overflow-hidden">
+        <div className="overflow-x-auto">
+          <table className="w-full text-left border-collapse min-w-[800px]">
+            <thead>
+              <tr className="bg-gray-50 border-b border-border">
+                <th className="p-4 font-bold text-text uppercase text-xs tracking-wider border-r border-border w-32 bg-gray-100/50">Day</th>
+                {Array.from({ length: Math.max(...sortedSchedule.map(d => d.periods.length)) || 1 }).map((_, idx) => (
+                  <th key={idx} className="p-4 font-bold text-gray-500 uppercase text-xs tracking-wider border-r border-border text-center">
+                    Period {idx + 1}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {sortedSchedule.map((day, rowIdx) => (
+                <tr key={day._id || day.dayOfWeek} className="border-b border-border hover:bg-gray-50/50 transition-colors">
+                  <td className="p-4 border-r border-border font-bold text-primary bg-gray-50/30 align-middle text-center">
+                    {day.dayOfWeek}
+                  </td>
+                  
+                  {day.periods.length === 0 ? (
+                    <td colSpan="100%" className="p-4 text-center text-gray-400 text-sm font-medium italic bg-gray-50">
+                      No classes scheduled
+                    </td>
+                  ) : (
+                    // Fill periods
+                    day.periods.map((period, colIdx) => (
+                      <td key={period._id || colIdx} className="p-4 border-r border-border align-top min-w-[200px]">
+                        <div className="bg-primary/5 rounded-xl p-3 border border-primary/10 hover:border-primary/30 hover:shadow-sm transition-all h-full">
+                          <h4 className="font-bold text-text text-sm mb-2">{period.subject}</h4>
+                          
+                          <div className="space-y-1.5 mt-3">
+                            <div className="flex items-center text-xs text-gray-600">
+                              <Clock size={14} className="mr-2 text-primary" />
+                              <span className="font-semibold">{period.startTime} - {period.endTime}</span>
+                            </div>
+                            <div className="flex items-center text-xs text-gray-600">
+                              <MapPin size={14} className="mr-2 text-primary" />
+                              <span>Room {period.room}</span>
+                            </div>
+                            <div className="flex items-center text-xs text-gray-600">
+                              <User size={14} className="mr-2 text-primary" />
+                              <span>{period.teacher}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    ))
+                  )}
+                  {/* Fill empty cells if this day has fewer periods than maxPeriods */}
+                  {Array.from({ length: Math.max(...sortedSchedule.map(d => d.periods.length)) - day.periods.length }).map((_, idx) => (
+                    <td key={`empty-${idx}`} className="p-4 border-r border-border bg-gray-50/30"></td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );

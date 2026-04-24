@@ -3,7 +3,7 @@ const asyncHandler = require('express-async-handler');
 
 const queryAssistant = asyncHandler(async (req, res) => {
   const { query } = req.body;
-  const userId = req.user._id;
+  const userId = req.user?._id || null;
 
   if (!query) {
     res.status(400);

@@ -22,11 +22,10 @@ const Landing = () => {
           </div>
           <span className="text-2xl font-bold tracking-tight">Student Support Agent</span>
         </div>
-        <div className="hidden md:flex items-center space-x-8 font-medium">
-          <a href="#features" className="text-gray-500 hover:text-primary transition-colors">Features</a>
-          <a href="#benefits" className="text-gray-500 hover:text-primary transition-colors">Benefits</a>
-          <Link to="/login" className="text-gray-500 hover:text-primary transition-colors">Login</Link>
-          <Link to="/signup" className="bg-primary text-white px-6 py-2.5 rounded-xl hover:bg-blue-700 transition-all shadow-md shadow-primary/20">
+        <div className="flex items-center space-x-4 md:space-x-8 font-medium">
+          <a href="#features" className="hidden lg:block text-gray-500 hover:text-primary transition-colors">Features</a>
+          <Link to="/login" className="text-gray-500 hover:text-primary transition-colors text-sm md:text-base">Login</Link>
+          <Link to="/signup" className="bg-primary text-white px-4 md:px-6 py-2 md:py-2.5 rounded-xl hover:bg-blue-700 transition-all shadow-md shadow-primary/20 text-sm md:text-base whitespace-nowrap">
             Get Started
           </Link>
         </div>

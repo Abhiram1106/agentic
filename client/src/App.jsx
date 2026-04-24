@@ -9,6 +9,7 @@ import Assistant from './pages/Assistant';
 import Electives from './pages/Electives';
 import Calendar from './pages/Calendar';
 import Timetable from './pages/Timetable';
+import Exams from './pages/Exams';
 import Policies from './pages/Policies';
 import Notifications from './pages/Notifications';
 import Admin from './pages/Admin';
@@ -44,6 +45,10 @@ function App() {
 
         <Route element={<DashboardLayout title="Weekly Timetable" />}>
           <Route path="/timetable" element={<Timetable />} />
+        </Route>
+
+        <Route element={<DashboardLayout title="Examination Timetable" />}>
+          <Route path="/exams" element={<Exams />} />
         </Route>
 
         <Route element={<DashboardLayout title="Policy Center" />}>

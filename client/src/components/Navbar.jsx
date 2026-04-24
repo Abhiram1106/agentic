@@ -1,9 +1,9 @@
 import React from 'react';
-import { Bell, Search, User } from 'lucide-react';
+import { Bell, Search, User, LogOut } from 'lucide-react';
 import useAuthStore from '../store/useAuthStore';
 
 const Navbar = ({ title }) => {
-  const { user } = useAuthStore();
+  const { user, logout } = useAuthStore();
 
   return (
     <header className="h-16 bg-surface border-b border-border flex items-center justify-between px-8 fixed top-0 right-0 left-64 z-10">
@@ -29,11 +29,18 @@ const Navbar = ({ title }) => {
         <div className="flex items-center space-x-3 pl-4 border-l border-border">
           <div className="text-right hidden sm:block">
             <p className="text-sm font-semibold text-text">{user?.profile?.fullName || 'Student'}</p>
-            <p className="text-xs text-gray-400">{user?.role === 'admin' ? 'Administrator' : `${user?.profile?.department}`}</p>
+            <p className="text-xs text-gray-400">{user?.role === 'admin' ? 'Administrator' : `${user?.profile?.department || 'User'}`}</p>
           </div>
           <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-primary border border-primary/20">
             <User size={18} />
           </div>
+          <button 
+            onClick={logout}
+            className="p-2 text-red-500 hover:bg-red-50 rounded-full transition-colors ml-2"
+            title="Logout"
+          >
+            <LogOut size={20} />
+          </button>
         </div>
       </div>
     </header>

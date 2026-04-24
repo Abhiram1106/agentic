@@ -156,46 +156,101 @@ const Admin = () => {
           <div className="card p-6 bg-primary/5 border border-primary/20">
             <h4 className="font-bold text-primary mb-2">Developer Tools</h4>
             <p className="text-xs text-gray-500 mb-4">Quick actions to populate the database with dummy data for testing.</p>
-            <button 
-              onClick={async () => {
-                setLoading(true);
-                try {
-                  await API.post('/admin/timetable', {
-                    department: 'Computer Science',
-                    year: 4,
-                    semester: 7,
-                    section: 'A',
-                    schedule: [
-                      { dayOfWeek: 'Monday', periods: [
-                        { subject: 'Cloud Computing', startTime: '09:00 AM', endTime: '10:00 AM', room: '301', teacher: 'Dr. Alan Turing' },
-                        { subject: 'Compiler Design', startTime: '10:00 AM', endTime: '11:00 AM', room: '302', teacher: 'Prof. Grace Hopper' },
-                        { subject: 'Machine Learning Lab', startTime: '11:00 AM', endTime: '01:00 PM', room: 'Lab 4', teacher: 'Dr. Andrew Ng' }
-                      ]},
-                      { dayOfWeek: 'Tuesday', periods: [
-                        { subject: 'Information Security', startTime: '09:00 AM', endTime: '10:00 AM', room: '301', teacher: 'Prof. Rivest' },
-                        { subject: 'Cloud Computing', startTime: '10:00 AM', endTime: '11:00 AM', room: '301', teacher: 'Dr. Alan Turing' },
-                        { subject: 'Compiler Design', startTime: '11:00 AM', endTime: '12:00 PM', room: '302', teacher: 'Prof. Grace Hopper' }
-                      ]},
-                      { dayOfWeek: 'Wednesday', periods: [
-                        { subject: 'Machine Learning', startTime: '09:00 AM', endTime: '10:00 AM', room: 'Auditorium 1', teacher: 'Dr. Andrew Ng' },
-                        { subject: 'Information Security', startTime: '10:00 AM', endTime: '11:00 AM', room: '301', teacher: 'Prof. Rivest' },
-                        { subject: 'Project Phase I', startTime: '01:00 PM', endTime: '04:00 PM', room: 'Lab 1', teacher: 'Dr. John Doe' }
-                      ]}
-                    ]
-                  });
-                  setSuccess('Timetable seeded successfully!');
-                  setTimeout(() => setSuccess(''), 3000);
-                } catch (err) {
-                  alert('Error seeding timetable');
-                } finally {
-                  setLoading(false);
-                }
-              }}
-              disabled={loading}
-              className="w-full py-2 bg-primary text-white rounded-lg font-bold text-sm hover:bg-primary/90 transition-colors"
-            >
-              Seed Dummy Timetable
-            </button>
+            <div className="space-y-3">
+              <button 
+                onClick={async () => {
+                  setLoading(true);
+                  try {
+                    await API.post('/admin/timetable', {
+                      department: 'Computer Science',
+                      year: 4,
+                      semester: 7,
+                      section: 'A',
+                      schedule: (() => {
+                        const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                        const subjects = ['Cloud Computing', 'Machine Learning', 'Compiler Design', 'Information Security', 'Software Engineering', 'Internet of Things', 'Data Science', 'Library'];
+                        const teachers = ['Dr. Alan Turing', 'Dr. Andrew Ng', 'Prof. Grace Hopper', 'Prof. Rivest', 'Dr. Linus Torvalds', 'Dr. Vinton Cerf', 'Dr. Yann LeCun', 'Staff'];
+                        const rooms = ['301', '302', '303', '304', 'Lab 1', 'Lab 2', 'Auditorium 1', 'Ground'];
+                        const times = [
+                          { start: '09:00 AM', end: '09:50 AM', type: 'class' },
+                          { start: '09:50 AM', end: '10:40 AM', type: 'class' },
+                          { start: '10:40 AM', end: '11:00 AM', type: 'break' },
+                          { start: '11:00 AM', end: '11:50 AM', type: 'class' },
+                          { start: '11:50 AM', end: '12:40 PM', type: 'class' },
+                          { start: '12:40 PM', end: '01:30 PM', type: 'lunch' },
+                          { start: '01:30 PM', end: '02:20 PM', type: 'class' },
+                          { start: '02:20 PM', end: '03:10 PM', type: 'class' },
+                          { start: '03:20 PM', end: '04:10 PM', type: 'class' },
+                          { start: '04:10 PM', end: '05:00 PM', type: 'class' }
+                        ];
+
+                        return days.map(day => ({
+                          dayOfWeek: day,
+                          periods: times.map((time, idx) => {
+                            if (time.type === 'break') {
+                              return { subject: 'Short Break', startTime: time.start, endTime: time.end, room: 'Cafeteria', teacher: '-' };
+                            }
+                            if (time.type === 'lunch') {
+                              return { subject: 'Lunch Break', startTime: time.start, endTime: time.end, room: 'Cafeteria / Ground', teacher: '-' };
+                            }
+                            const subIdx = (days.indexOf(day) + idx) % subjects.length;
+                            if (day === 'Saturday' && idx >= 6) {
+                              return { subject: 'Sports / Clubs', startTime: time.start, endTime: time.end, room: 'Ground', teacher: 'Staff' };
+                            }
+                            return {
+                              subject: subjects[subIdx],
+                              startTime: time.start,
+                              endTime: time.end,
+                              room: rooms[subIdx % rooms.length],
+                              teacher: teachers[subIdx % teachers.length]
+                            };
+                          })
+                        }));
+                      })()
+                    });
+                    setSuccess('Timetable seeded successfully!');
+                    setTimeout(() => setSuccess(''), 3000);
+                  } catch (err) {
+                    alert('Error seeding timetable');
+                  } finally {
+                    setLoading(false);
+                  }
+                }}
+                disabled={loading}
+                className="w-full py-2 bg-primary text-white rounded-lg font-bold text-sm hover:bg-primary/90 transition-colors"
+              >
+                Seed Dummy Timetable
+              </button>
+
+              <button 
+                onClick={async () => {
+                  setLoading(true);
+                  try {
+                    // Seed a few exams
+                    const exams = [
+                      { title: 'Mid Semester Exam', subject: 'Cloud Computing', date: new Date(new Date().setDate(new Date().getDate() + 5)), time: '10:00 AM - 12:00 PM', location: 'Exam Hall A', department: 'Computer Science', year: 4, semester: 7 },
+                      { title: 'Mid Semester Exam', subject: 'Machine Learning', date: new Date(new Date().setDate(new Date().getDate() + 7)), time: '02:00 PM - 04:00 PM', location: 'Exam Hall B', department: 'Computer Science', year: 4, semester: 7 },
+                      { title: 'Mid Semester Exam', subject: 'Information Security', date: new Date(new Date().setDate(new Date().getDate() + 9)), time: '10:00 AM - 12:00 PM', location: 'Room 305', department: 'Computer Science', year: 4, semester: 7 }
+                    ];
+                    
+                    for (const exam of exams) {
+                      await API.post('/admin/exams', exam);
+                    }
+                    
+                    setSuccess('Exams seeded successfully!');
+                    setTimeout(() => setSuccess(''), 3000);
+                  } catch (err) {
+                    alert('Error seeding exams');
+                  } finally {
+                    setLoading(false);
+                  }
+                }}
+                disabled={loading}
+                className="w-full py-2 bg-purple-600 text-white rounded-lg font-bold text-sm hover:bg-purple-700 transition-colors"
+              >
+                Seed Dummy Exams
+              </button>
+            </div>
           </div>
         </div>
       </div>
