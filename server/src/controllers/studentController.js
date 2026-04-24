@@ -112,116 +112,63 @@ const getCalendar = asyncHandler(async (req, res) => {
     return res.json(events);
   }
 
-  // Fallback to dummy events for development
-  const today = new Date();
-  
-  // Helper to ensure dummy dates don't fall on Sundays for academic work
-  const avoidSunday = (offset) => {
-    const d = new Date();
-    d.setDate(today.getDate() + offset);
-    if (d.getDay() === 0) d.setDate(d.getDate() + 1); // Move to Monday if Sunday
-    return d;
-  };
-
   const dummyEvents = [
-    {
-      title: 'Final Semester Examinations',
-      description: 'Major university-level theory examinations.',
-      type: 'Exam',
-      startDate: avoidSunday(15),
-      endDate: avoidSunday(15),
-      category: 'Academic'
-    },
-    {
-      title: 'Capstone Project Submission',
-      description: 'Final deadline for submitting the source code and documentation.',
-      type: 'Deadline',
-      startDate: avoidSunday(2),
-      endDate: avoidSunday(2),
-      category: 'Academic'
-    },
-    {
-      title: 'May Day (Public Holiday)',
-      description: 'International Workers\' Day - University Closed.',
-      type: 'Holiday',
-      startDate: new Date(today.getFullYear(), 4, 1), // May 1
-      endDate: new Date(today.getFullYear(), 4, 1),
-      category: 'Holiday'
-    },
-    {
-      title: 'Blockchain & Web3 Workshop',
-      description: '3-day intensive workshop on decentralized applications.',
-      type: 'Workshop',
-      startDate: avoidSunday(7),
-      endDate: avoidSunday(7),
-      category: 'Technical'
-    },
-    {
-      title: 'Annual Tech Symposium',
-      description: 'Departmental technical event with coding challenges and hackathons.',
-      type: 'Event',
-      startDate: avoidSunday(12),
-      endDate: avoidSunday(12),
-      category: 'Technical'
-    },
-    {
-      title: 'Summer Internship Orientation',
-      description: 'Mandatory session for 3rd and 4th year students regarding internships.',
-      type: 'Workshop',
-      startDate: avoidSunday(1),
-      endDate: avoidSunday(1),
-      category: 'Professional'
-    },
-    // National & Regional Holidays
-    {
-      title: 'Republic Day (National Holiday)',
-      description: 'Republic Day Celebrations and Flag Hoisting.',
-      type: 'Holiday',
-      startDate: new Date(today.getFullYear(), 0, 26),
-      endDate: new Date(today.getFullYear(), 0, 26),
-      category: 'Holiday'
-    },
-    {
-      title: 'Sankranthi / Pongal Holidays',
-      description: 'Annual harvest festival holidays.',
-      type: 'Holiday',
-      startDate: new Date(today.getFullYear(), 0, 14),
-      endDate: new Date(today.getFullYear(), 0, 16),
-      category: 'Holiday'
-    },
-    {
-      title: 'Independence Day (National Holiday)',
-      description: 'Independence Day Celebrations.',
-      type: 'Holiday',
-      startDate: new Date(today.getFullYear(), 7, 15),
-      endDate: new Date(today.getFullYear(), 7, 15),
-      category: 'Holiday'
-    },
-    {
-      title: 'Gandhi Jayanti',
-      description: 'Birthday of Mahatma Gandhi.',
-      type: 'Holiday',
-      startDate: new Date(today.getFullYear(), 9, 2),
-      endDate: new Date(today.getFullYear(), 9, 2),
-      category: 'Holiday'
-    },
-    {
-      title: 'Dasara / Dussehra Holidays',
-      description: 'Vijayadashami celebrations.',
-      type: 'Holiday',
-      startDate: new Date(today.getFullYear(), 9, 20),
-      endDate: new Date(today.getFullYear(), 9, 21),
-      category: 'Holiday'
-    },
-    {
-      title: 'Diwali / Deepavali',
-      description: 'Festival of Lights.',
-      type: 'Holiday',
-      startDate: new Date(today.getFullYear(), 10, 8),
-      endDate: new Date(today.getFullYear(), 10, 9),
-      category: 'Holiday'
-    }
-  ];
+    // ---------- SEMESTER 1 ----------
+    { date: "2025-09-22", title: "Commencement of Pre-Semester", type: "Academic" },
+    { date: "2025-09-30", title: "Holiday - Durgashtami", type: "Holiday" },
+    { date: "2025-10-02", title: "Gandhi Jayanti", type: "Holiday" },
+    { date: "2025-10-20", title: "Diwali Holiday", type: "Holiday" },
+    { date: "2025-10-29", title: "Commencement of Module-1", type: "Academic" },
+    { date: "2025-11-24", title: "M2 Pre-Target 1", type: "Deadline" },
+    { date: "2025-11-25", title: "M2 Pre-Target 1", type: "Deadline" },
+    { date: "2025-12-04", title: "M1 Target 1", type: "Deadline" },
+    { date: "2025-12-05", title: "M1 Target 1", type: "Deadline" },
+    { date: "2025-12-06", title: "M1 Target 1", type: "Deadline" },
+    { date: "2025-12-08", title: "Commencement of Module-2", type: "Academic" },
+    { date: "2025-12-25", title: "Christmas Holiday", type: "Holiday" },
+    { date: "2025-12-26", title: "M2 Pre-Target", type: "Deadline" },
+    { date: "2025-12-27", title: "M2 Pre-Target", type: "Deadline" },
+    { date: "2026-01-03", title: "M2 Pre-Target", type: "Deadline" },
+    { date: "2026-01-05", title: "M2 Pre-Target", type: "Deadline" },
+    { date: "2026-01-14", title: "Bhogi Holiday", type: "Holiday" },
+    { date: "2026-01-15", title: "Pongal Holiday", type: "Holiday" },
+    { date: "2026-01-16", title: "Kanuma Holiday", type: "Holiday" },
+    { date: "2026-01-26", title: "Republic Day", type: "Holiday" },
+    { date: "2026-02-14", title: "Last Date for Summative Assessment", type: "Deadline" },
+    { date: "2026-02-17", title: "Preparation Begins", type: "Exam" },
+    { date: "2026-02-18", title: "Preparation", type: "Exam" },
+    { date: "2026-02-19", title: "Preparation", type: "Exam" },
+    { date: "2026-02-20", title: "Summative Assessment Begins", type: "Exam" },
+    { date: "2026-02-28", title: "Summative Assessment Ends", type: "Exam" },
+
+    // ---------- SEMESTER 2 ----------
+    { date: "2026-03-04", title: "Commencement of Semester 2", type: "Academic" },
+    { date: "2026-03-19", title: "Ugadi Holiday", type: "Holiday" },
+    { date: "2026-03-20", title: "Ramzan Holiday", type: "Holiday" },
+    { date: "2026-03-27", title: "Sri Rama Navami", type: "Holiday" },
+    { date: "2026-04-03", title: "Good Friday", type: "Holiday" },
+    { date: "2026-04-14", title: "Ambedkar Jayanti", type: "Holiday" },
+    { date: "2026-04-10", title: "M1 Target 1", type: "Deadline" },
+    { date: "2026-04-11", title: "M1 Target 1", type: "Deadline" },
+    { date: "2026-05-01", title: "M2 Pre-Target", type: "Deadline" },
+    { date: "2026-05-02", title: "M2 Pre-Target", type: "Deadline" },
+    { date: "2026-05-14", title: "M2 Pre-Target", type: "Deadline" },
+    { date: "2026-05-15", title: "M2 Pre-Target", type: "Deadline" },
+    { date: "2026-05-27", title: "Bakrid Holiday", type: "Holiday" },
+    { date: "2026-06-20", title: "Last Date for Summative Assessment", type: "Deadline" },
+    { date: "2026-06-22", title: "Preparation Begins", type: "Exam" },
+    { date: "2026-06-23", title: "Preparation", type: "Exam" },
+    { date: "2026-06-24", title: "Preparation", type: "Exam" },
+    { date: "2026-06-25", title: "Muharram Holiday", type: "Holiday" },
+    { date: "2026-06-26", title: "Summative Assessment Begins", type: "Exam" },
+    { date: "2026-07-04", title: "Summative Assessment Ends", type: "Exam" }
+  ].map(event => ({
+    ...event,
+    startDate: new Date(event.date),
+    endDate: new Date(event.date),
+    category: event.type === 'Holiday' ? 'Holiday' : 'Academic',
+    description: event.title
+  }));
 
   res.json(dummyEvents);
 });

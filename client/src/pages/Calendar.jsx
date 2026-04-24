@@ -47,7 +47,7 @@ const Calendar = () => {
     }
   };
 
-  const eventTypes = ['All', 'Exam', 'Deadline', 'Holiday', 'Workshop', 'Event'];
+  const eventTypes = ['All', 'Academic', 'Exam', 'Deadline', 'Holiday', 'Workshop', 'Event'];
 
   const getEventColor = (type) => {
     switch (type) {
@@ -55,6 +55,7 @@ const Calendar = () => {
       case 'Deadline': return 'bg-orange-500';
       case 'Holiday': return 'bg-green-500';
       case 'Workshop': return 'bg-blue-500';
+      case 'Academic': return 'bg-indigo-500';
       case 'Event': return 'bg-purple-500';
       default: return 'bg-gray-500';
     }
