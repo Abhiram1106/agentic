@@ -7,6 +7,124 @@ const Notification = require('../models/Notification');
 const StudentProfile = require('../models/StudentProfile');
 const Timetable = require('../models/Timetable');
 const asyncHandler = require('express-async-handler');
+const fs = require('fs');
+const path = require('path');
+
+const CALENDAR_FILE_PATH = path.join(__dirname, '../../../vignan_academic_calendar_2025_26.json');
+
+const toDateEvent = (dateStr, title, type, description) => ({
+  startDate: new Date(dateStr),
+  endDate: new Date(dateStr),
+  title,
+  description,
+  type,
+  category: type === 'Holiday' ? 'Holiday' : 'Academic'
+});
+
+const assessmentTypeToEventType = (assessmentType) => {
+  if (assessmentType.toLowerCase().includes('summative assessment')) {
+    return 'Exam';
+  }
+  return 'Deadline';
+};
+
+const buildEventsFromAcademicCalendar = () => {
+  const raw = fs.readFileSync(CALENDAR_FILE_PATH, 'utf-8');
+  const calendarJson = JSON.parse(raw);
+  const years = calendarJson?.years || {};
+  const events = [];
+
+  Object.values(years).forEach((yearBlock) => {
+    const yearLabel = yearBlock?.label || 'Academic Year';
+
+    Object.entries(yearBlock).forEach(([semesterKey, semesterBlock]) => {
+      if (!semesterKey.startsWith('semester_') || !semesterBlock || typeof semesterBlock !== 'object') {
+        return;
+      }
+
+      const semesterLabel = semesterKey.replace('_', ' ').toUpperCase();
+      const prefix = `${yearLabel} - ${semesterLabel}`;
+
+      const milestoneFields = [
+        ['orientation', 'Orientation Session'],
+        ['pre_semester_commencement', 'Pre-Semester Commencement'],
+        ['module_1_commencement', 'Module-1 Commencement'],
+        ['module_2_commencement', 'Module-2 Commencement']
+      ];
+
+      milestoneFields.forEach(([fieldName, readableName]) => {
+        if (semesterBlock[fieldName]) {
+          events.push(
+            toDateEvent(
+              semesterBlock[fieldName],
+              `${prefix}: ${readableName}`,
+              'Academic',
+              `${readableName} for ${yearLabel}`
+            )
+          );
+        }
+      });
+
+      const keyEvents = semesterBlock.key_events || {};
+
+      (keyEvents.holidays || []).forEach((holiday) => {
+        if (!holiday?.date || !holiday?.name) return;
+        events.push(
+          toDateEvent(
+            holiday.date,
+            `${prefix}: ${holiday.name}`,
+            'Holiday',
+            `Holiday: ${holiday.name}`
+          )
+        );
+      });
+
+      (keyEvents.working_sundays || []).forEach((workingDay) => {
+        if (!workingDay?.date) return;
+        events.push(
+          toDateEvent(
+            workingDay.date,
+            `${prefix}: Working Day`,
+            'Event',
+            workingDay.reason || 'Marked as working day in academic calendar'
+          )
+        );
+      });
+
+      (keyEvents.assessments || []).forEach((assessment) => {
+        if (!assessment?.type) return;
+
+        const eventType = assessmentTypeToEventType(assessment.type);
+
+        if (Array.isArray(assessment.dates)) {
+          assessment.dates.forEach((dateStr) => {
+            events.push(
+              toDateEvent(
+                dateStr,
+                `${prefix}: ${assessment.type}`,
+                eventType,
+                `${assessment.type} for ${yearLabel}`
+              )
+            );
+          });
+        }
+
+        if (assessment.date_range?.start && assessment.date_range?.end) {
+          events.push({
+            startDate: new Date(assessment.date_range.start),
+            endDate: new Date(assessment.date_range.end),
+            title: `${prefix}: ${assessment.type}`,
+            description: `${assessment.type} (${assessment.date_range.start} to ${assessment.date_range.end})`,
+            type: eventType,
+            category: 'Academic'
+          });
+        }
+      });
+    });
+  });
+
+  return events.sort((a, b) => new Date(a.startDate) - new Date(b.startDate));
+};
 
 const getExams = asyncHandler(async (req, res) => {
   let profile = await StudentProfile.findOne({ user: req.user?._id });
@@ -106,71 +224,13 @@ const getPolicies = asyncHandler(async (req, res) => {
 });
 
 const getCalendar = asyncHandler(async (req, res) => {
-  const events = await CalendarEvent.find({});
-  
-  if (events && events.length > 0) {
-    return res.json(events);
+  try {
+    const fallbackEvents = buildEventsFromAcademicCalendar();
+    return res.json(fallbackEvents);
+  } catch (error) {
+    console.error('Failed to build calendar from JSON source:', error.message);
+    return res.status(500).json({ message: 'Unable to load academic calendar data' });
   }
-
-  const dummyEvents = [
-    // ---------- SEMESTER 1 ----------
-    { date: "2025-09-22", title: "Commencement of Pre-Semester", type: "Academic" },
-    { date: "2025-09-30", title: "Holiday - Durgashtami", type: "Holiday" },
-    { date: "2025-10-02", title: "Gandhi Jayanti", type: "Holiday" },
-    { date: "2025-10-20", title: "Diwali Holiday", type: "Holiday" },
-    { date: "2025-10-29", title: "Commencement of Module-1", type: "Academic" },
-    { date: "2025-11-24", title: "M2 Pre-Target 1", type: "Deadline" },
-    { date: "2025-11-25", title: "M2 Pre-Target 1", type: "Deadline" },
-    { date: "2025-12-04", title: "M1 Target 1", type: "Deadline" },
-    { date: "2025-12-05", title: "M1 Target 1", type: "Deadline" },
-    { date: "2025-12-06", title: "M1 Target 1", type: "Deadline" },
-    { date: "2025-12-08", title: "Commencement of Module-2", type: "Academic" },
-    { date: "2025-12-25", title: "Christmas Holiday", type: "Holiday" },
-    { date: "2025-12-26", title: "M2 Pre-Target", type: "Deadline" },
-    { date: "2025-12-27", title: "M2 Pre-Target", type: "Deadline" },
-    { date: "2026-01-03", title: "M2 Pre-Target", type: "Deadline" },
-    { date: "2026-01-05", title: "M2 Pre-Target", type: "Deadline" },
-    { date: "2026-01-14", title: "Bhogi Holiday", type: "Holiday" },
-    { date: "2026-01-15", title: "Pongal Holiday", type: "Holiday" },
-    { date: "2026-01-16", title: "Kanuma Holiday", type: "Holiday" },
-    { date: "2026-01-26", title: "Republic Day", type: "Holiday" },
-    { date: "2026-02-14", title: "Last Date for Summative Assessment", type: "Deadline" },
-    { date: "2026-02-17", title: "Preparation Begins", type: "Exam" },
-    { date: "2026-02-18", title: "Preparation", type: "Exam" },
-    { date: "2026-02-19", title: "Preparation", type: "Exam" },
-    { date: "2026-02-20", title: "Summative Assessment Begins", type: "Exam" },
-    { date: "2026-02-28", title: "Summative Assessment Ends", type: "Exam" },
-
-    // ---------- SEMESTER 2 ----------
-    { date: "2026-03-04", title: "Commencement of Semester 2", type: "Academic" },
-    { date: "2026-03-19", title: "Ugadi Holiday", type: "Holiday" },
-    { date: "2026-03-20", title: "Ramzan Holiday", type: "Holiday" },
-    { date: "2026-03-27", title: "Sri Rama Navami", type: "Holiday" },
-    { date: "2026-04-03", title: "Good Friday", type: "Holiday" },
-    { date: "2026-04-14", title: "Ambedkar Jayanti", type: "Holiday" },
-    { date: "2026-04-10", title: "M1 Target 1", type: "Deadline" },
-    { date: "2026-04-11", title: "M1 Target 1", type: "Deadline" },
-    { date: "2026-05-01", title: "M2 Pre-Target", type: "Deadline" },
-    { date: "2026-05-02", title: "M2 Pre-Target", type: "Deadline" },
-    { date: "2026-05-14", title: "M2 Pre-Target", type: "Deadline" },
-    { date: "2026-05-15", title: "M2 Pre-Target", type: "Deadline" },
-    { date: "2026-05-27", title: "Bakrid Holiday", type: "Holiday" },
-    { date: "2026-06-20", title: "Last Date for Summative Assessment", type: "Deadline" },
-    { date: "2026-06-22", title: "Preparation Begins", type: "Exam" },
-    { date: "2026-06-23", title: "Preparation", type: "Exam" },
-    { date: "2026-06-24", title: "Preparation", type: "Exam" },
-    { date: "2026-06-25", title: "Muharram Holiday", type: "Holiday" },
-    { date: "2026-06-26", title: "Summative Assessment Begins", type: "Exam" },
-    { date: "2026-07-04", title: "Summative Assessment Ends", type: "Exam" }
-  ].map(event => ({
-    ...event,
-    startDate: new Date(event.date),
-    endDate: new Date(event.date),
-    category: event.type === 'Holiday' ? 'Holiday' : 'Academic',
-    description: event.title
-  }));
-
-  res.json(dummyEvents);
 });
 
 const getReminders = asyncHandler(async (req, res) => {

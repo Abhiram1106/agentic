@@ -1,0 +1,487 @@
+{
+  "institution": "Vignan's Foundation for Science, Technology and Research",
+  "campus": "Vadlamudi",
+  "program": "Bachelor of Technology (B.Tech)",
+  "academic_year": "2025-26",
+  "generated_note": "Parsed from official revised academic calendar PDFs. Sections 51-54 are lateral-entry 1st year batches with a shifted semester start.",
+  "years": {
+    "first_year": {
+      "label": "B.Tech 1st Year (Regular)",
+      "semester_I": {
+        "orientation": "2025-07-11",
+        "pre_semester_commencement": "2025-08-07",
+        "module_1_commencement": "2025-09-11",
+        "module_2_commencement": "2025-10-29",
+        "weeks": [
+          { "week": "Week-0", "start": "2025-07-06", "end": "2025-07-12", "notes": ["Moharram holiday on 6-Jul", "Orientation Session on 11-Jul"] },
+          { "week": "Week-0", "start": "2025-07-13", "end": "2025-07-19", "notes": [] },
+          { "week": "Week-0", "start": "2025-07-20", "end": "2025-07-26", "notes": [] },
+          { "week": "Week-0", "start": "2025-07-27", "end": "2025-08-02", "notes": [] },
+          { "week": "Week-1", "start": "2025-08-03", "end": "2025-08-09", "notes": ["Pre-Semester Commencement on 7-Aug (Thu)"] },
+          { "week": "Week-2", "start": "2025-08-10", "end": "2025-08-16", "notes": ["15-Aug Independence Day Holiday", "16-Aug Krishnasthami Holiday"] },
+          { "week": "Week-3", "start": "2025-08-17", "end": "2025-08-23", "notes": ["27-Aug Vinayaka Chavathi Holiday (Wednesday)"] },
+          { "week": "Week-4", "start": "2025-08-24", "end": "2025-08-30", "notes": [] },
+          { "week": "Week-5", "start": "2025-08-31", "end": "2025-09-06", "notes": ["5-Sep Milad-un-Nabi Holiday"] },
+          { "week": "Week-6/1", "start": "2025-09-07", "end": "2025-09-13", "notes": ["11-Sep Module-1 Commencement (I Sem)"] },
+          { "week": "Week-2", "start": "2025-09-14", "end": "2025-09-20", "notes": [] },
+          { "week": "Week-3", "start": "2025-09-21", "end": "2025-09-27", "notes": [] },
+          { "week": "Week-4", "start": "2025-09-28", "end": "2025-10-04", "notes": ["30-Sep Durgaastami Holiday", "1-Oct Additional Holiday", "2-Oct Vijaya Dasami / Gandhi Jayanthi Holiday"] },
+          { "week": "Week-5", "start": "2025-10-05", "end": "2025-10-11", "notes": ["9-Oct M1 Pre-Target1", "10-Oct M1 Pre-Target1", "11-Oct M1 Pre-Target1"] },
+          { "week": "Week-6", "start": "2025-10-12", "end": "2025-10-18", "notes": ["12-Oct Working Day (Sunday)"] },
+          { "week": "Week-7", "start": "2025-10-19", "end": "2025-10-25", "notes": ["20-Oct Deepavali Holiday", "25-Oct M1 Target 1 (Saturday)"] },
+          { "week": "Week-8", "start": "2025-10-26", "end": "2025-11-01", "notes": ["27-Oct M1 Target 1", "28-Oct M1 Target 1", "29-Oct Module-2 Commencement (I Sem)", "31-Oct M1 Target 1"] },
+          { "week": "Week-9", "start": "2025-11-02", "end": "2025-11-08", "notes": [] },
+          { "week": "Week-10", "start": "2025-11-09", "end": "2025-11-15", "notes": [] },
+          { "week": "Week-11", "start": "2025-11-16", "end": "2025-11-22", "notes": [] },
+          { "week": "Week-12", "start": "2025-11-23", "end": "2025-11-29", "notes": ["28-Nov M2 Pre-Target1", "29-Nov M2 Pre-Target1"] },
+          { "week": "Week-13", "start": "2025-11-30", "end": "2025-12-06", "notes": [] },
+          { "week": "Week-14", "start": "2025-12-07", "end": "2025-12-13", "notes": ["8-Dec M2 Pre-Target1(2)", "9-Dec M2 Pre-Target1(2)"] },
+          { "week": "Week-15", "start": "2025-12-14", "end": "2025-12-20", "notes": ["17-Dec M2 Target 1", "18-Dec M2 Target 1", "19-Dec M2 Target 1", "20-Dec M2 Target 1"] },
+          { "week": "Week-16", "start": "2025-12-21", "end": "2025-12-27", "notes": ["25-Dec Christmas Holiday", "27-Dec M2 Target 3"] },
+          { "week": "Week-17", "start": "2025-12-28", "end": "2026-01-03", "notes": ["29-Dec M2 Target 3"] },
+          { "week": "Week-18", "start": "2026-01-04", "end": "2026-01-10", "notes": ["8-Jan Preparation & Last date for Summative P-Based", "9-Jan Preparation", "10-Jan M2 Target 4"] },
+          { "week": "Week-19", "start": "2026-01-11", "end": "2026-01-17", "notes": ["11-Jan M2 Target 4", "12-Jan M2 Target 4", "13-Jan Additional Holiday", "14-Jan Bhogl Holiday", "15-Jan Pongal Holiday", "16-Jan Kanuma Holiday", "17-Jan Additional Holiday"] },
+          { "week": "Week-20", "start": "2026-01-18", "end": "2026-01-24", "notes": ["19-Jan to 24-Jan Summative Assessment (L-Based)", "25-Jan to 31-Jan Summative Assessment (L-Based)"] },
+          { "week": "Week-21", "start": "2026-01-25", "end": "2026-01-31", "notes": ["26-Jan Republic Day Holiday", "27-Jan to 31-Jan Summative Assessment (L-Based)"] },
+          { "week": "Week-22", "start": "2026-02-01", "end": "2026-02-07", "notes": ["5-Feb Module-1 Commencement (II Sem)"] }
+        ],
+        "key_events": {
+          "holidays": [
+            { "date": "2025-07-06", "name": "Moharram" },
+            { "date": "2025-08-15", "name": "Independence Day" },
+            { "date": "2025-08-16", "name": "Krishnasthami" },
+            { "date": "2025-08-27", "name": "Vinayaka Chavathi" },
+            { "date": "2025-09-05", "name": "Milad-un-Nabi" },
+            { "date": "2025-09-30", "name": "Durgaastami" },
+            { "date": "2025-10-01", "name": "Additional Holiday" },
+            { "date": "2025-10-02", "name": "Vijaya Dasami / Gandhi Jayanthi" },
+            { "date": "2025-10-20", "name": "Deepavali" },
+            { "date": "2025-12-25", "name": "Christmas" },
+            { "date": "2026-01-13", "name": "Additional Holiday (Bhogl)" },
+            { "date": "2026-01-14", "name": "Bhogl" },
+            { "date": "2026-01-15", "name": "Pongal" },
+            { "date": "2026-01-16", "name": "Kanuma" },
+            { "date": "2026-01-17", "name": "Additional Holiday" },
+            { "date": "2026-01-26", "name": "Republic Day" }
+          ],
+          "working_sundays": [
+            { "date": "2025-10-12", "reason": "Working Day" }
+          ],
+          "assessments": [
+            { "type": "M1 Pre-Target 1", "dates": ["2025-10-09", "2025-10-10", "2025-10-11"] },
+            { "type": "M1 Target 1", "dates": ["2025-10-25", "2025-10-27", "2025-10-28", "2025-10-31"] },
+            { "type": "M2 Pre-Target 1", "dates": ["2025-11-28", "2025-11-29"] },
+            { "type": "M2 Pre-Target 1(2)", "dates": ["2025-12-08", "2025-12-09"] },
+            { "type": "M2 Target 1", "dates": ["2025-12-17", "2025-12-18", "2025-12-19", "2025-12-20"] },
+            { "type": "M2 Target 3", "dates": ["2025-12-27", "2025-12-29"] },
+            { "type": "M2 Target 4", "dates": ["2026-01-10", "2026-01-11", "2026-01-12"] },
+            { "type": "Summative P-Based Preparation & Last Date", "dates": ["2026-01-08", "2026-01-09"] },
+            { "type": "Summative Assessment (L-Based)", "date_range": { "start": "2026-01-19", "end": "2026-01-31" } }
+          ]
+        }
+      },
+      "semester_II": {
+        "module_1_commencement": "2026-02-05",
+        "module_2_commencement": "2026-03-31",
+        "weeks": [
+          { "week": "Week-1", "start": "2026-02-01", "end": "2026-02-07", "notes": ["5-Feb Module-1 Commencement"] },
+          { "week": "Week-2", "start": "2026-02-08", "end": "2026-02-14", "notes": [] },
+          { "week": "Week-3", "start": "2026-02-15", "end": "2026-02-21", "notes": ["15-Feb Mahashivarathri", "16-Feb Additional Holiday"] },
+          { "week": "Week-4", "start": "2026-02-22", "end": "2026-02-28", "notes": [] },
+          { "week": "Week-5", "start": "2026-03-01", "end": "2026-03-07", "notes": ["3-Mar Holi Holiday"] },
+          { "week": "Week-6", "start": "2026-03-08", "end": "2026-03-14", "notes": ["9-Mar M1 Pre-Target1", "10-Mar M1 Pre-Target1"] },
+          { "week": "Week-7", "start": "2026-03-15", "end": "2026-03-21", "notes": ["15-Mar Working Day (Sunday)", "19-Mar Ugadi Holiday", "20-Mar Ramzan Holiday", "21-Mar Additional Holiday", "27-Mar Srirama Navami Holiday"] },
+          { "week": "Week-8", "start": "2026-03-22", "end": "2026-03-28", "notes": ["26-Mar M1 Target 1", "28-Mar M1 Target 1"] },
+          { "week": "Week-9", "start": "2026-03-29", "end": "2026-04-04", "notes": ["30-Mar M1 Target 1", "31-Mar Module-2 Commencement", "3-Apr Good Friday Holiday"] },
+          { "week": "Week-10", "start": "2026-04-05", "end": "2026-04-11", "notes": ["5-Apr Babu Jagjivamram Jayanthi"] },
+          { "week": "Week-11", "start": "2026-04-12", "end": "2026-04-18", "notes": ["14-Apr Ambedkar Jayanthi"] },
+          { "week": "Week-12", "start": "2026-04-19", "end": "2026-04-25", "notes": ["20-Apr M2 Pre-Target1(1)", "21-Apr M2 Pre-Target1(1)"] },
+          { "week": "Week-13", "start": "2026-04-26", "end": "2026-05-02", "notes": ["1-May M2 Pre-Target1(2)", "2-May M2 Pre-Target1(2)"] },
+          { "week": "Week-14", "start": "2026-05-03", "end": "2026-05-09", "notes": ["14-May M2 Target 1", "15-May M2 Target 1", "16-May M2 Target 1"] },
+          { "week": "Week-15", "start": "2026-05-10", "end": "2026-05-16", "notes": [] },
+          { "week": "Week-16", "start": "2026-05-17", "end": "2026-05-23", "notes": [] },
+          { "week": "Week-17", "start": "2026-05-24", "end": "2026-05-30", "notes": ["25-May M2 Target 3", "26-May M2 Target 3", "27-May Bakrid Holiday", "28-May M2 Target 4", "29-May M2 Target 4", "30-May M2 Target 4"] },
+          { "week": "Week-18", "start": "2026-05-31", "end": "2026-06-06", "notes": ["6-Jun Preparation & Last date for Summative P-Based Assessments"] },
+          { "week": "Week-19", "start": "2026-06-07", "end": "2026-06-13", "notes": ["8-Jun to 11-Jun Preparation", "12-Jun Summative Assessment (L-Based)", "13-Jun Summative Assessment (L-Based)"] },
+          { "week": "Week-20", "start": "2026-06-14", "end": "2026-06-20", "notes": ["15-Jun to 20-Jun Summative Assessment (L-Based)"] },
+          { "week": "Week-21", "start": "2026-06-21", "end": "2026-06-27", "notes": ["22-Jun to 27-Jun Summative Assessment (L-Based)", "25-Jun Muharram Holiday"] }
+        ],
+        "key_events": {
+          "holidays": [
+            { "date": "2026-02-15", "name": "Mahashivarathri" },
+            { "date": "2026-02-16", "name": "Additional Holiday" },
+            { "date": "2026-03-03", "name": "Holi" },
+            { "date": "2026-03-19", "name": "Ugadi" },
+            { "date": "2026-03-20", "name": "Ramzan" },
+            { "date": "2026-03-21", "name": "Additional Holiday" },
+            { "date": "2026-03-27", "name": "Srirama Navami" },
+            { "date": "2026-04-03", "name": "Good Friday" },
+            { "date": "2026-05-27", "name": "Bakrid" },
+            { "date": "2026-06-25", "name": "Muharram" }
+          ],
+          "working_sundays": [
+            { "date": "2026-03-15", "reason": "Working Day" }
+          ],
+          "assessments": [
+            { "type": "M1 Pre-Target 1", "dates": ["2026-03-09", "2026-03-10"] },
+            { "type": "M1 Target 1", "dates": ["2026-03-26", "2026-03-28", "2026-03-30"] },
+            { "type": "M2 Pre-Target 1(1)", "dates": ["2026-04-20", "2026-04-21"] },
+            { "type": "M2 Pre-Target 1(2)", "dates": ["2026-05-01", "2026-05-02"] },
+            { "type": "M2 Target 1", "dates": ["2026-05-14", "2026-05-15", "2026-05-16"] },
+            { "type": "M2 Target 3", "dates": ["2026-05-25", "2026-05-26"] },
+            { "type": "M2 Target 4", "dates": ["2026-05-28", "2026-05-29", "2026-05-30"] },
+            { "type": "Summative P-Based Preparation & Last Date", "dates": ["2026-06-06"] },
+            { "type": "Summative Assessment (L-Based)", "date_range": { "start": "2026-06-12", "end": "2026-06-27" } }
+          ]
+        }
+      }
+    },
+    "first_year_lateral_sections_51_to_54": {
+      "label": "B.Tech 1st Year Sections 51, 52, 53 & 54 (Lateral Entry / Shifted)",
+      "semester_I": {
+        "pre_semester_commencement": "2025-09-22",
+        "module_1_commencement": "2025-10-29",
+        "module_2_commencement": "2025-12-08",
+        "weeks": [
+          { "week": "Week-1", "start": "2025-09-21", "end": "2025-09-27", "notes": ["22-Sep Pre-Semester Commencement"] },
+          { "week": "Week-2", "start": "2025-09-28", "end": "2025-10-04", "notes": ["29-Sep Additional Holiday", "30-Sep Durgaastami Holiday", "1-Oct Additional Holiday", "2-Oct Vijaya Dasami / Gandhi Jayanthi Holiday", "3-Oct Additional Holiday", "4-Oct Additional Holiday"] },
+          { "week": "Week-3", "start": "2025-10-05", "end": "2025-10-11", "notes": [] },
+          { "week": "Week-4", "start": "2025-10-12", "end": "2025-10-18", "notes": ["12-Oct Working Day"] },
+          { "week": "Week-5", "start": "2025-10-19", "end": "2025-10-25", "notes": ["20-Oct Deepavali Holiday"] },
+          { "week": "Week-6/1", "start": "2025-10-26", "end": "2025-11-01", "notes": ["29-Oct Module-1 Commencement (II Sem)"] },
+          { "week": "Week-2", "start": "2025-11-02", "end": "2025-11-08", "notes": [] },
+          { "week": "Week-3", "start": "2025-11-09", "end": "2025-11-15", "notes": [] },
+          { "week": "Week-4", "start": "2025-11-16", "end": "2025-11-22", "notes": [] },
+          { "week": "Week-5", "start": "2025-11-23", "end": "2025-11-29", "notes": ["24-Nov M2 Pre-Target1", "25-Nov M2 Pre-Target1"] },
+          { "week": "Week-6", "start": "2025-11-30", "end": "2025-12-06", "notes": ["4-Dec M1 Target 1", "5-Dec M1 Target 1", "6-Dec M1 Target 1"] },
+          { "week": "Week-7", "start": "2025-12-07", "end": "2025-12-13", "notes": ["8-Dec Module-2 Commencement (I Sem)"] },
+          { "week": "Week-8", "start": "2025-12-14", "end": "2025-12-20", "notes": [] },
+          { "week": "Week-9", "start": "2025-12-21", "end": "2025-12-27", "notes": ["25-Dec Christmas Holiday", "26-Dec M2 Pre-Target1(1)", "27-Dec M2 Pre-Target1(1)"] },
+          { "week": "Week-10", "start": "2025-12-28", "end": "2026-01-03", "notes": ["3-Jan M2 Pre-Target1(2)"] },
+          { "week": "Week-11", "start": "2026-01-04", "end": "2026-01-10", "notes": ["5-Jan M2 Pre-Target1(2)"] },
+          { "week": "Week-12", "start": "2026-01-11", "end": "2026-01-17", "notes": ["11-Jan Working Day", "13-Jan Additional Holiday", "14-Jan Bhogl Holiday", "15-Jan Pongal Holiday", "16-Jan Kanuma Holiday", "17-Jan Additional Holiday"] },
+          { "week": "Week-13", "start": "2026-01-18", "end": "2026-01-24", "notes": [] },
+          { "week": "Week-14", "start": "2026-01-25", "end": "2026-01-31", "notes": ["26-Jan Republic Day", "27-Jan M2 Target 1", "28-Jan M2 Target 1", "29-Jan M2 Target 1"] },
+          { "week": "Week-15", "start": "2026-02-01", "end": "2026-02-07", "notes": [] },
+          { "week": "Week-16", "start": "2026-02-08", "end": "2026-02-14", "notes": ["9-Feb M2 Target 3", "10-Feb M2 Target 3", "11-Feb M2 Target 4", "12-Feb M2 Target 4", "13-Feb M2 Target 4", "14-Feb Preparation & Last Date for Summative P-Based"] },
+          { "week": "Week-17", "start": "2026-02-15", "end": "2026-02-21", "notes": ["15-Feb Mahashivarathri", "16-Feb Additional Holiday", "17-Feb to 21-Feb Preparation"] },
+          { "week": "Week-18", "start": "2026-02-22", "end": "2026-02-28", "notes": ["23-Feb to 28-Feb Summative Assessment (L-Based)"] },
+          { "week": "Week-19", "start": "2026-03-01", "end": "2026-03-07", "notes": ["2-Mar Summative Assessment (L-Based)", "3-Mar Holi Holiday", "4-Mar Module-1 Commencement (II Sem)"] }
+        ],
+        "key_events": {
+          "holidays": [
+            { "date": "2025-09-29", "name": "Additional Holiday" },
+            { "date": "2025-09-30", "name": "Durgaastami" },
+            { "date": "2025-10-01", "name": "Additional Holiday" },
+            { "date": "2025-10-02", "name": "Vijaya Dasami / Gandhi Jayanthi" },
+            { "date": "2025-10-03", "name": "Additional Holiday" },
+            { "date": "2025-10-04", "name": "Additional Holiday" },
+            { "date": "2025-10-20", "name": "Deepavali" },
+            { "date": "2025-12-25", "name": "Christmas" },
+            { "date": "2026-01-13", "name": "Additional Holiday (Bhogl)" },
+            { "date": "2026-01-14", "name": "Bhogl" },
+            { "date": "2026-01-15", "name": "Pongal" },
+            { "date": "2026-01-16", "name": "Kanuma" },
+            { "date": "2026-01-17", "name": "Additional Holiday" },
+            { "date": "2026-01-26", "name": "Republic Day" },
+            { "date": "2026-02-15", "name": "Mahashivarathri" },
+            { "date": "2026-02-16", "name": "Additional Holiday" },
+            { "date": "2026-03-03", "name": "Holi" }
+          ],
+          "working_sundays": [
+            { "date": "2025-10-12", "reason": "Working Day" },
+            { "date": "2026-01-11", "reason": "Working Day" }
+          ],
+          "assessments": [
+            { "type": "M2 Pre-Target 1", "dates": ["2025-11-24", "2025-11-25"] },
+            { "type": "M1 Target 1", "dates": ["2025-12-04", "2025-12-05", "2025-12-06"] },
+            { "type": "M2 Pre-Target 1(1)", "dates": ["2025-12-26", "2025-12-27"] },
+            { "type": "M2 Pre-Target 1(2)", "dates": ["2026-01-03", "2026-01-05"] },
+            { "type": "M2 Target 1", "dates": ["2026-01-27", "2026-01-28", "2026-01-29"] },
+            { "type": "M2 Target 3", "dates": ["2026-02-09", "2026-02-10"] },
+            { "type": "M2 Target 4", "dates": ["2026-02-11", "2026-02-12", "2026-02-13"] },
+            { "type": "Summative P-Based Preparation & Last Date", "dates": ["2026-02-14"] },
+            { "type": "Summative Assessment (L-Based)", "date_range": { "start": "2026-02-17", "end": "2026-03-02" } }
+          ]
+        }
+      },
+      "semester_II": {
+        "module_1_commencement": "2026-03-04",
+        "module_2_commencement": "2026-04-13",
+        "weeks": [
+          { "week": "Week-19/1", "start": "2026-03-01", "end": "2026-03-07", "notes": ["4-Mar Module-1 Commencement (II Sem)"] },
+          { "week": "Week-1", "start": "2026-03-08", "end": "2026-03-14", "notes": [] },
+          { "week": "Week-2", "start": "2026-03-15", "end": "2026-03-21", "notes": ["15-Mar Working Day", "19-Mar Ugadi Holiday", "20-Mar Ramzan Holiday", "21-Mar Additional Holiday", "27-Mar Srirama Navami Holiday"] },
+          { "week": "Week-3", "start": "2026-03-22", "end": "2026-03-28", "notes": ["23-Mar M1 Pre-Target1", "24-Mar M1 Pre-Target1"] },
+          { "week": "Week-4", "start": "2026-03-29", "end": "2026-04-04", "notes": ["3-Apr Good Friday Holiday"] },
+          { "week": "Week-5", "start": "2026-04-05", "end": "2026-04-11", "notes": ["5-Apr Babu Jagjivamram Jayanthi", "10-Apr M1 Target 1", "11-Apr M1 Target 1"] },
+          { "week": "Week-6", "start": "2026-04-12", "end": "2026-04-18", "notes": ["13-Apr M1 Target 1", "13-Apr Module-2 Commencement (II Sem)", "14-Apr Ambedkar Jayanthi"] },
+          { "week": "Week-7", "start": "2026-04-19", "end": "2026-04-25", "notes": [] },
+          { "week": "Week-8", "start": "2026-04-26", "end": "2026-05-02", "notes": ["1-May M2 Pre-Target1(1)", "2-May M2 Pre-Target1(1)"] },
+          { "week": "Week-9", "start": "2026-05-03", "end": "2026-05-09", "notes": [] },
+          { "week": "Week-10", "start": "2026-05-10", "end": "2026-05-16", "notes": ["14-May M2 Pre-Target1(2)", "15-May M2 Pre-Target1(2)"] },
+          { "week": "Week-11", "start": "2026-05-17", "end": "2026-05-23", "notes": [] },
+          { "week": "Week-12", "start": "2026-05-24", "end": "2026-05-30", "notes": ["25-May M2 Target 1", "27-May Bakrid Holiday", "27-May M2 Target 1", "29-May M2 Target 1"] },
+          { "week": "Week-13", "start": "2026-05-31", "end": "2026-06-06", "notes": [] },
+          { "week": "Week-14", "start": "2026-06-07", "end": "2026-06-13", "notes": ["9-Jun M2 Target 3", "10-Jun M2 Target 3", "11-Jun M2 Target 4", "12-Jun M2 Target 4", "13-Jun M2 Target 4"] },
+          { "week": "Week-15", "start": "2026-06-14", "end": "2026-06-20", "notes": ["20-Jun Preparation & Last Date for Summative P-Based Assessments"] },
+          { "week": "Week-16", "start": "2026-06-21", "end": "2026-06-27", "notes": ["22-Jun to 24-Jun Preparation", "25-Jun Muharram Holiday", "26-Jun Summative Assessment (L-Based)", "27-Jun Summative Assessment (L-Based)"] },
+          { "week": "Week-17", "start": "2026-06-28", "end": "2026-07-04", "notes": ["29-Jun to 4-Jul Summative Assessment (L-Based)"] },
+          { "week": "Week-18", "start": "2026-07-05", "end": "2026-07-11", "notes": ["6-Jul Summative Assessment (L-Based)"] }
+        ],
+        "key_events": {
+          "holidays": [
+            { "date": "2026-03-19", "name": "Ugadi" },
+            { "date": "2026-03-20", "name": "Ramzan" },
+            { "date": "2026-03-21", "name": "Additional Holiday" },
+            { "date": "2026-03-27", "name": "Srirama Navami" },
+            { "date": "2026-04-03", "name": "Good Friday" },
+            { "date": "2026-05-27", "name": "Bakrid" },
+            { "date": "2026-06-25", "name": "Muharram" }
+          ],
+          "working_sundays": [
+            { "date": "2026-03-15", "reason": "Working Day" }
+          ],
+          "assessments": [
+            { "type": "M1 Pre-Target 1", "dates": ["2026-03-23", "2026-03-24"] },
+            { "type": "M1 Target 1", "dates": ["2026-04-10", "2026-04-11", "2026-04-13"] },
+            { "type": "M2 Pre-Target 1(1)", "dates": ["2026-05-01", "2026-05-02"] },
+            { "type": "M2 Pre-Target 1(2)", "dates": ["2026-05-14", "2026-05-15"] },
+            { "type": "M2 Target 1", "dates": ["2026-05-25", "2026-05-27", "2026-05-29"] },
+            { "type": "M2 Target 3", "dates": ["2026-06-09", "2026-06-10"] },
+            { "type": "M2 Target 4", "dates": ["2026-06-11", "2026-06-12", "2026-06-13"] },
+            { "type": "Summative P-Based Preparation & Last Date", "dates": ["2026-06-20"] },
+            { "type": "Summative Assessment (L-Based)", "date_range": { "start": "2026-06-26", "end": "2026-07-06" } }
+          ]
+        }
+      }
+    },
+    "second_and_third_year": {
+      "label": "B.Tech 2nd & 3rd Year (Re-Revised)",
+      "semester_I": {
+        "module_1_commencement": "2025-07-14",
+        "module_2_commencement": "2025-09-11",
+        "weeks": [
+          { "week": "Week-1", "start": "2025-07-13", "end": "2025-07-19", "notes": ["14-Jul Module-1 Commencement (I Sem)"] },
+          { "week": "Week-2", "start": "2025-07-20", "end": "2025-07-26", "notes": [] },
+          { "week": "Week-3", "start": "2025-07-27", "end": "2025-08-02", "notes": [] },
+          { "week": "Week-4", "start": "2025-08-03", "end": "2025-08-09", "notes": [] },
+          { "week": "Week-5", "start": "2025-08-10", "end": "2025-08-16", "notes": ["15-Aug Independence Day", "16-Aug Krishnasthami"] },
+          { "week": "Week-6", "start": "2025-08-17", "end": "2025-08-23", "notes": ["20-Aug M1 Target 1", "21-Aug M1 Target 1", "22-Aug M1 Target 1"] },
+          { "week": "Week-7", "start": "2025-08-24", "end": "2025-08-30", "notes": ["27-Aug Vinayaka Chavathi Holiday"] },
+          { "week": "Week-8", "start": "2025-08-31", "end": "2025-09-06", "notes": ["4-Sep M1 Target 3", "5-Sep Milad-un-Nabi Holiday", "6-Sep M1 Target 3"] },
+          { "week": "Week-9", "start": "2025-09-07", "end": "2025-09-13", "notes": ["8-Sep M1 Target 4", "9-Sep M1 Target 4", "10-Sep M1 Target 4", "11-Sep Module-2 Commencement"] },
+          { "week": "Week-10", "start": "2025-09-14", "end": "2025-09-20", "notes": [] },
+          { "week": "Week-11", "start": "2025-09-21", "end": "2025-09-27", "notes": [] },
+          { "week": "Week-12", "start": "2025-09-28", "end": "2025-10-04", "notes": ["29-Sep Additional Holiday", "30-Sep Durgaastami Holiday", "1-Oct Additional Holiday", "2-Oct Vijaya Dasami / Gandhi Jayanthi"] },
+          { "week": "Week-13", "start": "2025-10-05", "end": "2025-10-11", "notes": [] },
+          { "week": "Week-14", "start": "2025-10-12", "end": "2025-10-18", "notes": [] },
+          { "week": "Week-15", "start": "2025-10-19", "end": "2025-10-25", "notes": ["20-Oct Deepavali Holiday"] },
+          { "week": "Week-16", "start": "2025-10-26", "end": "2025-11-01", "notes": ["27-Oct M2 Target 1", "28-Oct M2 Target 1", "29-Oct M2 Target 1"] },
+          { "week": "Week-17", "start": "2025-11-02", "end": "2025-11-08", "notes": [] },
+          { "week": "Week-18", "start": "2025-11-09", "end": "2025-11-15", "notes": ["10-Nov M2 Target 3", "11-Nov M2 Target 3", "12-Nov M2 Target 4", "13-Nov M2 Target 4", "14-Nov M2 Target 4", "15-Nov Preparation & Summative Assessment (P-Based)"] },
+          { "week": "Week-19", "start": "2025-11-16", "end": "2025-11-22", "notes": ["16-Nov to 22-Nov Preparation & Summative Assessment (P-Based)"] },
+          { "week": "Week-20", "start": "2025-11-23", "end": "2025-11-29", "notes": ["24-Nov to 29-Nov Summative Assessment (L-Based)"] },
+          { "week": "Week-21", "start": "2025-11-30", "end": "2025-12-06", "notes": ["1-Dec to 6-Dec Summative Assessment (L-Based)"] },
+          { "week": "Week-22", "start": "2025-12-07", "end": "2025-12-13", "notes": [] },
+          { "week": "Week-23", "start": "2025-12-14", "end": "2025-12-20", "notes": ["17-Dec Module-1 Commencement (II Sem)"] }
+        ],
+        "key_events": {
+          "holidays": [
+            { "date": "2025-08-15", "name": "Independence Day" },
+            { "date": "2025-08-16", "name": "Krishnasthami" },
+            { "date": "2025-08-27", "name": "Vinayaka Chavathi" },
+            { "date": "2025-09-05", "name": "Milad-un-Nabi" },
+            { "date": "2025-09-29", "name": "Additional Holiday" },
+            { "date": "2025-09-30", "name": "Durgaastami" },
+            { "date": "2025-10-01", "name": "Additional Holiday" },
+            { "date": "2025-10-02", "name": "Vijaya Dasami / Gandhi Jayanthi" },
+            { "date": "2025-10-20", "name": "Deepavali" }
+          ],
+          "assessments": [
+            { "type": "M1 Target 1", "dates": ["2025-08-20", "2025-08-21", "2025-08-22"] },
+            { "type": "M1 Target 3", "dates": ["2025-09-04", "2025-09-06"] },
+            { "type": "M1 Target 4", "dates": ["2025-09-08", "2025-09-09", "2025-09-10"] },
+            { "type": "M2 Target 1", "dates": ["2025-10-27", "2025-10-28", "2025-10-29"] },
+            { "type": "M2 Target 3", "dates": ["2025-11-10", "2025-11-11"] },
+            { "type": "M2 Target 4", "dates": ["2025-11-12", "2025-11-13", "2025-11-14"] },
+            { "type": "Summative Assessment (P-Based)", "date_range": { "start": "2025-11-15", "end": "2025-11-22" } },
+            { "type": "Summative Assessment (L-Based)", "date_range": { "start": "2025-11-24", "end": "2025-12-06" } }
+          ]
+        }
+      },
+      "semester_II": {
+        "module_1_commencement": "2025-12-22",
+        "module_2_commencement": "2026-03-04",
+        "weeks": [
+          { "week": "Week-1", "start": "2025-12-21", "end": "2025-12-27", "notes": ["22-Dec Module-1 Commencement (II Sem)", "25-Dec Christmas"] },
+          { "week": "Week-2", "start": "2025-12-28", "end": "2026-01-03", "notes": [] },
+          { "week": "Week-3", "start": "2026-01-04", "end": "2026-01-10", "notes": [] },
+          { "week": "Week-4", "start": "2026-01-11", "end": "2026-01-17", "notes": ["11-Jan Working Day", "13-Jan Additional Holiday", "14-Jan Bhogl", "15-Jan Pongal", "16-Jan Kanuma", "17-Jan Additional Holiday"] },
+          { "week": "Week-5", "start": "2026-01-18", "end": "2026-01-24", "notes": ["20-Jan M1 Pre-Target1", "21-Jan M1 Pre-Target1"] },
+          { "week": "Week-6", "start": "2026-01-25", "end": "2026-01-31", "notes": ["26-Jan Republic Day"] },
+          { "week": "Week-7", "start": "2026-02-01", "end": "2026-02-07", "notes": [] },
+          { "week": "Week-8", "start": "2026-02-08", "end": "2026-02-14", "notes": ["11-Feb M1 Target 1", "12-Feb M1 Target 1", "13-Feb M1 Target 1"] },
+          { "week": "Week-9", "start": "2026-02-15", "end": "2026-02-21", "notes": ["15-Feb Mahashivarathri", "16-Feb Additional Holiday"] },
+          { "week": "Week-10", "start": "2026-02-22", "end": "2026-02-28", "notes": ["25-Feb M1 Target 3", "26-Feb M1 Target 3", "27-Feb M1 Target 4", "28-Feb M1 Target 4"] },
+          { "week": "Week-11", "start": "2026-03-01", "end": "2026-03-07", "notes": ["2-Mar M1 Target 4", "3-Mar Holi Holiday", "4-Mar Module-2 Commencement"] },
+          { "week": "Week-12", "start": "2026-03-08", "end": "2026-03-14", "notes": [] },
+          { "week": "Week-13", "start": "2026-03-15", "end": "2026-03-21", "notes": ["15-Mar Working Day", "19-Mar Ugadi Holiday", "20-Mar Ramzan", "21-Mar Additional Holiday"] },
+          { "week": "Week-14", "start": "2026-03-22", "end": "2026-03-28", "notes": ["25-Mar M2 Pre-Target1", "26-Mar M2 Pre-Target1", "27-Mar Srirama Navami"] },
+          { "week": "Week-15", "start": "2026-03-29", "end": "2026-04-04", "notes": ["3-Apr Good Friday"] },
+          { "week": "Week-16", "start": "2026-04-05", "end": "2026-04-11", "notes": ["5-Apr Babu Jagjivamram Jayanthi", "11-Apr M2 Target 1"] },
+          { "week": "Week-17", "start": "2026-04-12", "end": "2026-04-18", "notes": ["13-Apr M2 Target 1", "14-Apr Ambedkar Jayanthi", "15-Apr M2 Target 1"] },
+          { "week": "Week-18", "start": "2026-04-19", "end": "2026-04-25", "notes": [] },
+          { "week": "Week-19", "start": "2026-04-26", "end": "2026-05-02", "notes": ["27-Apr M2 Target 3", "28-Apr M2 Target 3", "29-Apr M2 Target 4", "30-Apr M2 Target 4", "1-May M2 Target 4", "2-May Preparation & Summative Assessment (P-Based)"] },
+          { "week": "Week-20", "start": "2026-05-03", "end": "2026-05-09", "notes": ["4-May to 9-May Preparation & Summative Assessment (P-Based)"] },
+          { "week": "Week-21", "start": "2026-05-10", "end": "2026-05-16", "notes": ["11-May to 16-May Summative Assessment (L-Based)"] },
+          { "week": "Week-22", "start": "2026-05-17", "end": "2026-05-23", "notes": ["18-May to 23-May Summative Assessment (L-Based)"] },
+          { "week": "Week-23", "start": "2026-05-24", "end": "2026-05-30", "notes": ["25-May to 27-May Bakrid/L-Based", "27-May Bakrid Holiday"] }
+        ],
+        "key_events": {
+          "holidays": [
+            { "date": "2025-12-25", "name": "Christmas" },
+            { "date": "2026-01-13", "name": "Additional Holiday" },
+            { "date": "2026-01-14", "name": "Bhogl" },
+            { "date": "2026-01-15", "name": "Pongal" },
+            { "date": "2026-01-16", "name": "Kanuma" },
+            { "date": "2026-01-17", "name": "Additional Holiday" },
+            { "date": "2026-01-26", "name": "Republic Day" },
+            { "date": "2026-02-15", "name": "Mahashivarathri" },
+            { "date": "2026-02-16", "name": "Additional Holiday" },
+            { "date": "2026-03-03", "name": "Holi" },
+            { "date": "2026-03-19", "name": "Ugadi" },
+            { "date": "2026-03-20", "name": "Ramzan" },
+            { "date": "2026-03-21", "name": "Additional Holiday" },
+            { "date": "2026-03-27", "name": "Srirama Navami" },
+            { "date": "2026-04-03", "name": "Good Friday" },
+            { "date": "2026-05-27", "name": "Bakrid" }
+          ],
+          "working_sundays": [
+            { "date": "2026-01-11", "reason": "Working Day" },
+            { "date": "2026-03-15", "reason": "Working Day" }
+          ],
+          "assessments": [
+            { "type": "M1 Pre-Target 1", "dates": ["2026-01-20", "2026-01-21"] },
+            { "type": "M1 Target 1", "dates": ["2026-02-11", "2026-02-12", "2026-02-13"] },
+            { "type": "M1 Target 3", "dates": ["2026-02-25", "2026-02-26"] },
+            { "type": "M1 Target 4", "dates": ["2026-02-27", "2026-02-28", "2026-03-02"] },
+            { "type": "M2 Pre-Target 1", "dates": ["2026-03-25", "2026-03-26"] },
+            { "type": "M2 Target 1", "dates": ["2026-04-11", "2026-04-13", "2026-04-15"] },
+            { "type": "M2 Target 3", "dates": ["2026-04-27", "2026-04-28"] },
+            { "type": "M2 Target 4", "dates": ["2026-04-29", "2026-04-30", "2026-05-01"] },
+            { "type": "Summative Assessment (P-Based)", "date_range": { "start": "2026-05-02", "end": "2026-05-09" } },
+            { "type": "Summative Assessment (L-Based)", "date_range": { "start": "2026-05-11", "end": "2026-05-27" } }
+          ]
+        }
+      }
+    },
+    "fourth_year": {
+      "label": "B.Tech 4th Year (Re-Revised)",
+      "semester_I": {
+        "module_1_commencement": "2025-07-14",
+        "module_2_commencement": "2025-09-11",
+        "weeks": [
+          { "week": "Week-1", "start": "2025-07-13", "end": "2025-07-19", "notes": ["14-Jul Module-1 Commencement (I Sem)"] },
+          { "week": "Week-2", "start": "2025-07-20", "end": "2025-07-26", "notes": [] },
+          { "week": "Week-3", "start": "2025-07-27", "end": "2025-08-02", "notes": [] },
+          { "week": "Week-4", "start": "2025-08-03", "end": "2025-08-09", "notes": [] },
+          { "week": "Week-5", "start": "2025-08-10", "end": "2025-08-16", "notes": ["15-Aug Independence Day", "16-Aug Krishnasthami"] },
+          { "week": "Week-6", "start": "2025-08-17", "end": "2025-08-23", "notes": ["20-Aug M1 Target 1", "21-Aug M1 Target 1", "22-Aug M1 Target 1"] },
+          { "week": "Week-7", "start": "2025-08-24", "end": "2025-08-30", "notes": ["27-Aug Vinayaka Chavathi"] },
+          { "week": "Week-8", "start": "2025-08-31", "end": "2025-09-06", "notes": ["4-Sep M1 Target 3", "5-Sep Milad-un-Nabi Holiday", "6-Sep M1 Target 3"] },
+          { "week": "Week-9", "start": "2025-09-07", "end": "2025-09-13", "notes": ["8-Sep M1 Target 4", "9-Sep M1 Target 4", "10-Sep M1 Target 4", "11-Sep Module-2 Commencement"] },
+          { "week": "Week-10", "start": "2025-09-14", "end": "2025-09-20", "notes": [] },
+          { "week": "Week-11", "start": "2025-09-21", "end": "2025-09-27", "notes": [] },
+          { "week": "Week-12", "start": "2025-09-28", "end": "2025-10-04", "notes": ["29-Sep Additional Holiday", "30-Sep Durgaastami", "1-Oct Additional Holiday", "2-Oct Vijaya Dasami / Gandhi Jayanthi"] },
+          { "week": "Week-13", "start": "2025-10-05", "end": "2025-10-11", "notes": [] },
+          { "week": "Week-14", "start": "2025-10-12", "end": "2025-10-18", "notes": [] },
+          { "week": "Week-15", "start": "2025-10-19", "end": "2025-10-25", "notes": ["20-Oct Deepavali"] },
+          { "week": "Week-16", "start": "2025-10-26", "end": "2025-11-01", "notes": [] },
+          { "week": "Week-17", "start": "2025-11-02", "end": "2025-11-08", "notes": ["5-Nov M2 Target 1", "6-Nov M2 Target 1", "7-Nov M2 Target 1"] },
+          { "week": "Week-18", "start": "2025-11-09", "end": "2025-11-15", "notes": [] },
+          { "week": "Week-19", "start": "2025-11-16", "end": "2025-11-22", "notes": ["20-Nov M2 Target 3", "21-Nov M2 Target 3", "22-Nov M2 Target 4"] },
+          { "week": "Week-20", "start": "2025-11-23", "end": "2025-11-29", "notes": ["24-Nov M2 Target 4", "25-Nov Preparation & Summative (P-Based)", "26-Nov to 29-Nov Preparation & Summative (P-Based)"] },
+          { "week": "Week-21", "start": "2025-11-30", "end": "2025-12-06", "notes": ["1-Dec to 6-Dec Summative Assessment (L-Based)"] },
+          { "week": "Week-22", "start": "2025-12-07", "end": "2025-12-13", "notes": ["8-Dec to 13-Dec Summative Assessment (L-Based)"] },
+          { "week": "Week-23", "start": "2025-12-14", "end": "2025-12-20", "notes": ["15-Dec to 17-Dec Summative Assessment (L-Based)"] },
+          { "week": "Week-24", "start": "2025-12-21", "end": "2025-12-27", "notes": ["22-Dec Module-1 Commencement (II Sem)", "25-Dec Christmas"] }
+        ],
+        "key_events": {
+          "holidays": [
+            { "date": "2025-08-15", "name": "Independence Day" },
+            { "date": "2025-08-16", "name": "Krishnasthami" },
+            { "date": "2025-08-27", "name": "Vinayaka Chavathi" },
+            { "date": "2025-09-05", "name": "Milad-un-Nabi" },
+            { "date": "2025-09-29", "name": "Additional Holiday" },
+            { "date": "2025-09-30", "name": "Durgaastami" },
+            { "date": "2025-10-01", "name": "Additional Holiday" },
+            { "date": "2025-10-02", "name": "Vijaya Dasami / Gandhi Jayanthi" },
+            { "date": "2025-10-20", "name": "Deepavali" },
+            { "date": "2025-12-25", "name": "Christmas" }
+          ],
+          "assessments": [
+            { "type": "M1 Target 1", "dates": ["2025-08-20", "2025-08-21", "2025-08-22"] },
+            { "type": "M1 Target 3", "dates": ["2025-09-04", "2025-09-06"] },
+            { "type": "M1 Target 4", "dates": ["2025-09-08", "2025-09-09", "2025-09-10"] },
+            { "type": "M2 Target 1", "dates": ["2025-11-05", "2025-11-06", "2025-11-07"] },
+            { "type": "M2 Target 3", "dates": ["2025-11-20", "2025-11-21"] },
+            { "type": "M2 Target 4", "dates": ["2025-11-22", "2025-11-24"] },
+            { "type": "Summative Assessment (P-Based)", "date_range": { "start": "2025-11-25", "end": "2025-11-29" } },
+            { "type": "Summative Assessment (L-Based)", "date_range": { "start": "2025-12-01", "end": "2025-12-17" } }
+          ]
+        }
+      },
+      "semester_II": {
+        "label": "Shared with 2nd & 3rd Year Sem-II schedule",
+        "note": "4th year Semester II follows the same B.Tech 2nd, 3rd & 4th Year Sem-II calendar starting 22-Dec-2025",
+        "module_1_commencement": "2025-12-22",
+        "module_2_commencement": "2026-03-04",
+        "key_events": {
+          "holidays": [
+            { "date": "2025-12-25", "name": "Christmas" },
+            { "date": "2026-01-13", "name": "Additional Holiday" },
+            { "date": "2026-01-14", "name": "Bhogl" },
+            { "date": "2026-01-15", "name": "Pongal" },
+            { "date": "2026-01-16", "name": "Kanuma" },
+            { "date": "2026-01-17", "name": "Additional Holiday" },
+            { "date": "2026-01-26", "name": "Republic Day" },
+            { "date": "2026-02-15", "name": "Mahashivarathri" },
+            { "date": "2026-02-16", "name": "Additional Holiday" },
+            { "date": "2026-03-03", "name": "Holi" },
+            { "date": "2026-03-19", "name": "Ugadi" },
+            { "date": "2026-03-20", "name": "Ramzan" },
+            { "date": "2026-03-21", "name": "Additional Holiday" },
+            { "date": "2026-03-27", "name": "Srirama Navami" },
+            { "date": "2026-04-03", "name": "Good Friday" },
+            { "date": "2026-05-27", "name": "Bakrid" }
+          ],
+          "working_sundays": [
+            { "date": "2026-01-11", "reason": "Working Day" },
+            { "date": "2026-03-15", "reason": "Working Day" }
+          ],
+          "assessments": [
+            { "type": "M1 Pre-Target 1", "dates": ["2026-01-20", "2026-01-21"] },
+            { "type": "M1 Target 1", "dates": ["2026-02-11", "2026-02-12", "2026-02-13"] },
+            { "type": "M1 Target 3", "dates": ["2026-02-25", "2026-02-26"] },
+            { "type": "M1 Target 4", "dates": ["2026-02-27", "2026-02-28", "2026-03-02"] },
+            { "type": "M2 Pre-Target 1", "dates": ["2026-03-25", "2026-03-26"] },
+            { "type": "M2 Target 1", "dates": ["2026-04-11", "2026-04-13", "2026-04-15"] },
+            { "type": "M2 Target 3", "dates": ["2026-04-27", "2026-04-28"] },
+            { "type": "M2 Target 4", "dates": ["2026-04-29", "2026-04-30", "2026-05-01"] },
+            { "type": "Summative Assessment (P-Based)", "date_range": { "start": "2026-05-02", "end": "2026-05-09" } },
+            { "type": "Summative Assessment (L-Based)", "date_range": { "start": "2026-05-11", "end": "2026-05-27" } }
+          ]
+        }
+      }
+    }
+  },
+  "assessment_types_glossary": {
+    "M1": "Module 1 (first half of semester)",
+    "M2": "Module 2 (second half of semester)",
+    "Pre-Target": "Internal pre-exam / pre-assessment",
+    "Target": "Internal assessment/exam",
+    "Summative P-Based": "Summative exam — Project/Performance Based",
+    "Summative L-Based": "Summative exam — Lab/Lecture Based"
+  }
+}
